@@ -1,9 +1,9 @@
 import React from 'react';
-
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
+import { connect } from 'react-redux';
 
 const App = () => {
   const state = {
@@ -37,4 +37,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default connect(null, {})(App);
