@@ -4,13 +4,9 @@ import { removeFeature } from '../actions'
 
 class AddedFeature extends React.Component {
 
-  state = {
-    newFeature: ''
-  };
-
   removeFeature = e => {
     e.preventDefault();
-    this.props.removeFeature(this.state.newFeature);
+    this.props.removeFeature(this.state.feature);
   };
 
   render() {
@@ -18,7 +14,7 @@ class AddedFeature extends React.Component {
       <li>
         {/* Add an onClick to run a function to remove a feature */}
         <button onClick={this.removeFeature} className="button">X</button>
-        {this.state.newFeature}
+        {this.state.feature}
       </li >
     );
   };
